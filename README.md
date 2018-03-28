@@ -1,6 +1,8 @@
 # RESTful-Blog-API
 
-### This was a challenge/assignment from [EDX](https://edx.org), course ["Introduction to Node.js"](https://www.edx.org/course/introduction-to-nodejs), Module 2.
+### This was a challenge/assignment from [EDX](https://edx.org), course ["Introduction to Node.js"](https://www.edx.org/course/introduction-to-nodejs), Module 2. 
+
+#### The project is a implementation of a RESTful Blog API using Node.js and Express.js framework. In other words, it is just a simple server that can do some CRUD (Create, Read, Update and Delete) http requests. There is no database used for this project, so if the server restarts, the content will be lost :worried:.
 
 - - - - 
 
