@@ -11,6 +11,7 @@ let store = require('../store.js');			// Imports the stores blog posts
 
 module.exports = {comments, posts, 			// Exports all the requests
 	reset(req, res) {	 					// Resets the blog
+		if (store.posts.length === 0) return res.sendStatus(400); // "Bad request" code in case there is no post
 		store.posts = [];					// Cleans the store variable
 		res.status(205).send();				// Reset code
 		console.log('All posts have been deleted.');
