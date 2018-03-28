@@ -27,7 +27,7 @@ ___WINDOWS USERS___:
     * To update a blog post, use **curl -H "Content-Type: application/json" -X PUT -d '{"name": "ANY CONTENT", "url":"ANY CONTENT", "text": "ANY CONTENT"}' "http&#58;//localhost:3000/posts/POSTID"**;
     * To delete a blog post, use **curl -X DELETE "http&#58;//localhost:3000/posts/POSTID"**;
     * To show all the blog post comments, use **curl "http&#58;//localhost:3000/posts/POSTID/comments"**;
-    * To add a blog post comment, use **curl -H "Content-Type: application/json" -X POST -d '{"text": "ANY CONTENT"}'  "http&#58;//localhost:3000/posts/POSTID/comments"**;
+    * To add a blog post comment, use **curl -H "Content-Type: application/json" -X POST -d '{"text": "ANY CONTENT"}'  "http&#58;//localhost:3000/posts/POSTID/comments"**; 
     * To update a blog post comment, use **curl -H "Content-Type: application/json" -X PUT -d '{"text": "ANYCONTENT"}'  "http&#58;//localhost:3000/posts/POSTID/comments/COMMENTID"**;
     * To delete a blog post comment, use **curl -X DELETE "http&#58;//localhost:3000/posts/POSTID/comments/COMMENTID"**;
     * To delete all the blog posts at once, use **curl -X DELETE "http&#58;//localhost:3000/reset"**.
