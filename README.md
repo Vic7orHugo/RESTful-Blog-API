@@ -20,7 +20,8 @@ ___WINDOWS USERS___:
 
 ### INSTRUCTIONS
 
-  * On the first *bash/cmd*, use the command **npm start**;
+  * On the first *bash/cmd*, use the command **npm i**;
+  * Still on the first one, use the command **npm start**;
   * On the second *bash/cmd*, use the command **sh test.sh** or, if you want to test individualy:
     * To show all the blog posts, use **curl "http&#58;//localhost:3000/posts"**;
     * To add a blog post, use **curl -H "Content-Type: application/json" -X POST -d '{"name": "ANY CONTENT", "url":"ANY CONTENT", "text": "ANY CONTENT"}' "http&#58;//localhost:3000/posts"**;
