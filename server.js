@@ -14,22 +14,29 @@ const { comments, posts, reset } = require('./routes'); // Imports all the route
 // Instanciating the Express server
 let app = express();
 
+// Stores all the blog posts
+let store = { posts: [] }; 	
+
 // Using all the imported middleware
 app.use(bodyParser.json());
 app.use(logger('dev'));
 app.use(errorhandler());
+app.use((req, res, next) => {
+	req.store = store;
+	next();
+});
 
 // CRUD requests for posts
-app.get('/posts', comments.getComments);
-app.post('/posts', comments.addComment);
-app.put('/posts/:postId', comments.updateComment);
-app.delete('/posts/:postId', comments.removeComment);
+app.get('/posts', posts.get);
+app.post('/posts', posts.add);
+app.put('/posts/:postId', posts.update);
+app.delete('/posts/:postId', posts.remove);
 
 // CRUD requests for comments
-app.get('/posts/:postId/comments', posts.getPosts);
-app.post('/posts/:postId/comments', posts.addPost);
-app.put('/posts/:postId/comments/:commentId', posts.updatePost);
-app.delete('/posts/:postId/comments/:commentId', posts.removePost);
+app.get('/posts/:postId/comments', comments.get);
+app.post('/posts/:postId/comments', comments.add);
+app.put('/posts/:postId/comments/:commentId', comments.update);
+app.delete('/posts/:postId/comments/:commentId', comments.remove);
 
 // Reset Blog request
 app.delete('/reset', reset);
