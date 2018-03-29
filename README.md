@@ -39,7 +39,7 @@ ___WINDOWS USERS___:
 
 1. Try to have both *bash/cmd* windows on the screen, so you can see the server logs and client responses simultaneously.
 
-2. ANY CONTENT means that you can put any message. Empty spaces (" ") only count for the **"text"** key. If you input empty spaces for the other two keys, the server will/should give you a "Bad request" message.
+2. ANY CONTENT means that you can put any message. Empty spaces (" ") only count for the **"text"** key. If you input empty spaces for the other two keys, the server will/should give you a "Bad request" message. 
 
 3. POSTID is the post ID number. It should be a positive integer number.
 
